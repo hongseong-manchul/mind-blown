@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>홍성군수 예비후보 공약 소개</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --primary: #2255a4;
+      --primary-light: #e6f0ff;
+      --accent: #f9a826;
+      --text: #222;
+      --muted: #666;
+      --bg: #f7f7f7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), #1b3c7a);
+      color: #fff;
+      padding: 24px 16px 32px;
+      border-radius: 0 0 24px 24px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 14px;
+      color: #e0e7ff;
+      margin-bottom: 16px;
+    }
+    .tagline {
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+    .btn-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+    .btn-primary {
+      background: #fff;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .btn-outline {
+      border: 1px solid #fff;
+      color: #fff;
+      background: transparent;
+    }
+
+    section {
+      padding: 20px 16px;
+      background: #fff;
+      margin: 12px 0;
+      border-radius: 16px;
+    }
+    section h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    section p.desc {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .pill {
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+    }
+
+    .promise-card {
+      background: #fafafa;
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 1px solid #eee;
+    }
+    .promise-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .promise-tag {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .promise-body {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    details {
+      border-radius: 10px;
+      background: #fafafa;
+      border: 1px solid #eee;
+      padding: 8px 10px;
+      margin-bottom: 8px;
+    }
+    summary {
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    label {
+      font-size: 13px;
+      font-weight: 500;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    .helper {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .btn-submit {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 4px;
+    }
+
+    .candidate-info {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .photo-placeholder {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--primary);
+    }
+    .candidate-info p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .contact-list {
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    .contact-list div {
+      margin-bottom: 4px;
+    }
+
+    footer {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      padding: 16px 12px 32px;
+    }
+
+    @media (min-width: 768px) {
+      header h1 { font-size: 28px; }
+      section { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="tagline">홍성군수 예비후보</div>
+      <h1>○○○ 공약 소개</h1>
+      <p>홍성의 내일, 군민과 함께 설계하겠습니다.</p>
+      <div class="btn-row">
+        <a href="#promises" class="btn btn-primary">핵심 공약 보기</a>
+        <a href="#opinion" class="btn btn-outline">의견 남기기</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="promises">
+      <h2>핵심 공약 한눈에</h2>
+      <p class="desc">군민 삶과 직결되는 핵심 공약을 분야별로 정리했습니다.</p>
+      <div class="pill-row">
+        <span class="pill">농업·농촌</span>
+        <span class="pill">복지·돌봄</span>
+        <span class="pill">지역경제</span>
+        <span class="pill">교통·환경</span>
+      </div>
+
+      <div class="promise-card">
+        <div class="promise-title">지속가능한 농업, 농민 기본소득</div>
+        <div class="promise-tag">농업·농촌</div>
+        <div class="promise-body">
+          친환경·소규모 농가를 중심으로 안정적인 소득 기반을 마련하고, 지역 먹거리 순환체계를 강화하겠습니다.
+        </div>
+      </div>
+
+      <div class="promise-card">
+        <div class="promise-title">마을 단위 돌봄·복지센터 확충</div>
+        <div class="promise-tag">복지·돌봄</div>
+        <div class="promise-body">
+          아이부터 어르신까지, 읍·면마다 생활권 안에서 이용 가능한 돌봄·복지 인프라를 갖추겠습니다.
+        </div>
+      </div>
+
+      <div class="promise-card">
+        <div class="promise-title">청년·로컬 비즈니스 지원 플랫폼</div>
+        <div class="promise-tag">지역경제</div>
+        <div class="promise-body">
+          청년 창업과 로컬 비즈니스가 성장할 수 있도록 공간·자금·네트워크를 통합 지원하겠습니다.
+        </div>
+      </div>
+    </section>
+
+    <section id="details">
+      <h2>분야별 자세한 공약</h2>
+      <p class="desc">관심 있는 분야를 눌러 세부 공약을 확인하실 수 있습니다.</p>
+
+      <details>
+        <summary>농업·농촌 정책</summary>
+        <ul style="margin-top:8px; padding-left:18px; font-size:13px; color:#555;">
+          <li>소농·고령농 중심의 농민 기본소득 시범 도입</li>
+          <li>공공급식과 연계한 로컬푸드 직거래 확대</li>
+          <li>농촌 마을별 생활SOC·기초 인프라 보강</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>복지·교육·돌봄</summary>
+        <ul style="margin-top:8px; padding-left:18px; font-size:13px; color:#555;">
+          <li>읍·면 통합 돌봄센터 설치 및 돌봄 인력 확충</li>
+          <li>지역 학교-마을 연계 마을교육공동체 지원</li>
+          <li>취약계층 맞춤형 방문 복지 서비스 강화</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>지역경제·청년</summary>
+        <ul style="margin-top:8px; padding-left:18px; font-size:13px; color:#555;">
+          <li>청년 로컬 창업 지원센터 및 공유오피스 조성</li>
+          <li>전통시장·골목상권 환경 개선 및 디지털 전환 지원</li>
+          <li>사회적경제·협동조합 활성화를 위한 전담 조직 설치</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>교통·환경·생활인프라</summary>
+        <ul style="margin-top:8px; padding-left:18px; font-size:13px; color:#555;">
+          <li>읍·면 간 생활권 기반 대중교통 노선 재정비</li>
+          <li>친환경 에너지 전환 시범 마을 조성</li>
+          <li>보행로·자전거길·생활체육시설 확충</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="opinion">
+      <h2>군민 의견을 들려주세요</h2>
+      <p class="desc">
+        홍성의 변화에 대한 생각과 제안을 자유롭게 남겨주세요. 성실히 읽고 정책에 반영하겠습니다.
+      </p>
+
+      <form>
+        <div>
+          <label for="name">이름 (선택)</label>
+          <input id="name" name="name" placeholder="예: 홍길동">
+        </div>
+        <div>
+          <label for="region">거주 지역 (필수)</label>
+          <select id="region" name="region" required>
+            <option value="">거주 읍·면을 선택하세요</option>
+            <option>홍성읍</option>
+            <option>광천읍</option>
+            <option>홍북읍</option>
+            <option>갈산면</option>
+            <option>구항면</option>
+            <option>금마면</option>
+            <option>서부면</option>
+            <option>은하면</option>
+            <option>장곡면</option>
+            <option>결성면</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">의견 (필수)</label>
+          <textarea id="message" name="message" placeholder="홍성에서 꼭 바꾸고 싶은 점, 좋은 점, 공약에 대한 의견 등을 자유롭게 적어주세요." required></textarea>
+          <div class="helper">개인정보는 의견 수렴 및 정책 검토 목적 외에는 사용하지 않습니다.</div>
+        </div>
+        <button type="submit" class="btn-submit">의견 보내기</button>
+      </form>
+
+      <p class="helper" style="margin-top:8px;">
+        ※ 실제 전송 기능은 추후 구글 설문지, 이메일 또는 별도 시스템과 연동이 필요합니다.
+      </p>
+    </section>
+
+    <section id="about">
+      <h2>후보 소개</h2>
+      <div class="candidate-info">
+        <div class="photo-placeholder">후보 사진</div>
+        <div>
+          <strong>○○○ / 홍성군수 예비후보</strong>
+          <p>
+            농업·농촌, 지역발전을 중심으로 정책을 연구해 온 경험을 바탕으로
+            군민과 함께 홍성의 미래를 만들어가겠습니다.
+          </p>
+        </div>
+      </div>
+      <div class="contact-list">
+        <div>선거사무소: 홍성군 ○○읍 ○○로 ○○</div>
+        <div>전화: 041-XXX-XXXX</div>
+        <div>이메일: example@campaign.kr</div>
+        <div>카카오채널 / 페이스북 / 유튜브: @홍성○○○캠프</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    이 페이지는 홍성군수 예비후보 ○○○ 선거사무소에서 관리합니다.<br>
+    표시는 예시이며, 실제 선거법·표기 기준에 맞춰 수정이 필요합니다.
+  </footer>
+
+</body>
+</html>
